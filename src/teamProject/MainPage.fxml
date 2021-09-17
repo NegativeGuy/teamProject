@@ -17,12 +17,12 @@
    <children>
       <ImageView fitHeight="810.0" fitWidth="900.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../TeamProject/images/mainpage1.png" />
+            <Image url="@mainpage1.png" />
          </image>
       </ImageView>
       <ImageView fx:id="arrowLeft" fitHeight="304.0" fitWidth="41.0" layoutX="40.0" layoutY="278.0" onMouseClicked="#arrowLeft" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../TeamProject/images/arrow.png" />
+            <Image url="@arrow.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -35,7 +35,7 @@
       </ImageView>
       <ImageView fx:id="arrowRight" fitHeight="304.0" fitWidth="41.0" layoutX="302.0" layoutY="278.0" onMouseClicked="#arrowRight" pickOnBounds="true" preserveRatio="true" rotate="180.0">
          <image>
-            <Image url="@../../../../../../TeamProject/images/arrow.png" />
+            <Image url="@arrow.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -71,7 +71,7 @@
       </HBox>
       <ImageView fitHeight="126.0" fitWidth="90.0" layoutX="691.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../TeamProject/images/seller-transparent-png.png" />
+            <Image url="@seller-transparent-png.png" />
          </image>
       </ImageView>
       <Label layoutX="430.0" layoutY="245.0" text="A Tale of Two Cities">
