@@ -58,7 +58,6 @@ public class DBService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		 
 		 return dto;
 	 }
 }

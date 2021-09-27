@@ -4,7 +4,9 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.SepiaTone?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,9 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="743.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teamProject.MainPageController">
+<AnchorPane prefHeight="767.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teamProject.MainPageController">
    <children>
-      <ImageView fitHeight="810.0" fitWidth="900.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="765.0" fitWidth="810.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@mainpage1.png" />
          </image>
@@ -30,7 +32,7 @@
       </ImageView>
       <ImageView fx:id="viewBook" fitHeight="300.0" fitWidth="210.0" layoutX="93.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../TeamProject/images/books/book1.png" />
+            <Image url="@books/book0.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="arrowRight" fitHeight="304.0" fitWidth="41.0" layoutX="302.0" layoutY="278.0" onMouseClicked="#arrowRight" pickOnBounds="true" preserveRatio="true" rotate="180.0">
@@ -69,54 +71,38 @@
             </Label>
          </children>
       </HBox>
-      <ImageView fitHeight="126.0" fitWidth="90.0" layoutX="691.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="126.0" fitWidth="90.0" layoutX="662.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@seller-transparent-png.png" />
          </image>
       </ImageView>
-      <Label layoutX="430.0" layoutY="245.0" text="A Tale of Two Cities">
-         <font>
-            <Font name="Batang" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="431.0" layoutY="275.0" text="두 도시 이야기" textFill="#d12020">
-         <font>
-            <Font name="Batang" size="36.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="157.0" fitWidth="308.0" layoutX="483.0" layoutY="459.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+      <VBox alignment="CENTER" layoutX="345.0" layoutY="272.0" prefHeight="139.0" prefWidth="394.0" spacing="15.0">
+         <children>
+            <Label fx:id="booktitle" alignment="CENTER" textFill="#d12020">
+               <font>
+                  <Font name="Batang" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="author" alignment="CENTER">
+               <font>
+                  <Font name="Batang" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnVote" mnemonicParsing="false" onAction="#vote" text="투표하기" />
+         </children>
+      </VBox>
+      <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="625.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../TeamProject/images/books/book1score.png" />
+            <Image url="@user.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <SepiaTone level="0.78" />
+         </effect>
       </ImageView>
-      <ImageView fitHeight="154.0" fitWidth="410.0" layoutX="483.0" layoutY="626.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../TeamProject/images/books/book1smile.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="503.0" layoutY="319.0" text="찰스 디킨즈">
-         <font>
-            <Font name="Batang" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="529.0" layoutY="345.0" text="1959">
-         <font>
-            <Font name="Batang" size="18.0" />
-         </font>
-      </Label>
-      <BarChart horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="14.0" layoutY="466.0" opacity="0.9" prefHeight="314.0" prefWidth="390.0">
-        <xAxis>
-          <CategoryAxis label="like" side="BOTTOM">
-               <tickLabelFont>
-                  <Font name="Consolas" size="12.0" />
-               </tickLabelFont>
-            </CategoryAxis>
-        </xAxis>
-        <yAxis>
-          <NumberAxis minorTickCount="1" side="LEFT" tickMarkVisible="false" upperBound="5.0" />
-        </yAxis>
-      </BarChart>
-      <VBox alignment="BOTTOM_RIGHT" layoutX="510.0" layoutY="43.0" prefHeight="54.0" prefWidth="262.0">
+      <VBox alignment="BOTTOM_RIGHT" layoutX="476.0" layoutY="44.0" prefHeight="54.0" prefWidth="262.0">
          <children>
             <Label text="Logged in as" textFill="#226655">
                <font>
@@ -133,16 +119,29 @@
             </Label>
          </children>
       </VBox>
-      <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="662.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../TeamProject/images/user.png" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <SepiaTone level="0.78" />
-         </effect>
-      </ImageView>
+      <Label layoutX="312.0" layoutY="159.0" text="이 달의 책을 투표로 뽑자">
+         <font>
+            <Font name="Batang" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="201.0" text="베스트 셀러 5권 중 가장 표를 많이 받은 도서가 ">
+         <font>
+            <Font name="Batang" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="218.0" text="새 도서로 등록되어 대여가 가능합니다 ">
+         <font>
+            <Font name="Batang" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="bookInfo" editable="false" layoutX="21.0" layoutY="457.0" opacity="0.8" prefHeight="265.0" prefWidth="380.0" wrapText="true" />
+      <BarChart fx:id="barChart" layoutX="393.0" layoutY="443.0" prefHeight="284.0" prefWidth="370.0">
+        <xAxis>
+          <CategoryAxis prefHeight="37.0" prefWidth="316.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickUnit="0.0" upperBound="25.0" />
+        </yAxis>
+      </BarChart>
    </children>
 </AnchorPane>
